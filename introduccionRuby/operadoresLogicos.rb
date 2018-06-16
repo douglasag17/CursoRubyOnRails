@@ -16,4 +16,5 @@ end
 
 print "Dime tu calificacion: "
 calificacion = gets.to_i
+
 evaluar(calificacion)
