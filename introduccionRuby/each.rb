@@ -15,3 +15,7 @@ end
 
 #each para no hacer ciclos, es muy util
 "Douglas".each_char { |chr| puts chr }
+
+10.times do |time|
+  puts "Este es el iterador times #{time}"
+end
