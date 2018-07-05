@@ -1,5 +1,4 @@
 class Perro
-    
     def initialize(raza, color, edad)
         @raza = raza
         @color = color
