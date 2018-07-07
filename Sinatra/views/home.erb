@@ -1,0 +1,6 @@
+<h1>Talleres del ciclo escolar 2017-2018</h1>
+<% @files.delete('..') %>
+<% @files.delete('.') %>
+<% @files.each do |file_name| %>
+    <a href="/<%=File.basename(file_name, ".*")%>"> <%=File.basename(file_name, ".*")%> </a> <br>
+<% end %>
