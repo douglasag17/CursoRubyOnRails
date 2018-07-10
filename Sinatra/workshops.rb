@@ -1,4 +1,4 @@
-# get, post, delete
+# get, post, put, delete
 
 require "sinatra"
 
