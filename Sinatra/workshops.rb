@@ -33,10 +33,15 @@ get '/:name' do
     erb :workshop
 end
 
+get '/:name/edit' do
+    @name = params[:name]
+    @description = workshop_content(@name)
+    erb :edit
+end
+
 post '/create' do
+    save_workshop(params["name"], params["description"])
     @name = params["name"]
-    @description = params["description"]
-    save_workshop(@name, @description)
     @message = "creado"
     erb :message
 end
@@ -46,4 +51,9 @@ delete '/:name' do
     @name = params["name"]
     @message = "borrado"
     erb :message
+end
+
+put '/:name' do
+    save_workshop(params[:name], params[:description])
+    redirect URI.escape("/#{params[:name]}")
 end
